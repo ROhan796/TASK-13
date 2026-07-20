@@ -1,0 +1,35 @@
+# Secrets — NEVER commit these
+aai-wms-backend/secrets/*.txt
+aai-wms-backend/certs/ca/ca.key
+aai-wms-backend/certs/**/*.key
+aai-wms-backend/certs/**/*.pem
+aai-wms-backend/.env
+
+# DA Engine
+da-engine/.env
+
+# Portal
+aai-unified-portal/.env.local
+aai-unified-portal/.next/
+aai-unified-portal/node_modules/
+
+# Python
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+da-engine/venv/
+aai-wms-backend/venv/
+
+# Docker
+**/.docker/
+
+# Logs
+*.log
+**/logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# PIDs
+.portal.pid

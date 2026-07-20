@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  da-engine:
+    build: .
+    ports:
+      - "8001:8001"
+    env_file:
+      - .env
+    environment:
+      - NSCBI_API_BASE_URL=${NSCBI_API_BASE_URL:-https://api.nscbiairport.com/api}
+      - NSCBI_API_KEY=${NSCBI_API_KEY:-your_api_key_here}
+      - POLLING_INTERVAL_SECONDS=${POLLING_INTERVAL_SECONDS:-30}
+      - DA_ENGINE_HOST=${DA_ENGINE_HOST:-0.0.0.0}
+      - DA_ENGINE_PORT=${DA_ENGINE_PORT:-8001}
+      - ENVIRONMENT=${ENVIRONMENT:-development}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - DEFAULT_WASHROOM_CAPACITY=${DEFAULT_WASHROOM_CAPACITY:-10}
+      - CACHE_TTL_SECONDS=${CACHE_TTL_SECONDS:-60}
+      - WHI_HISTORY_BUFFER_SIZE=${WHI_HISTORY_BUFFER_SIZE:-100}
+      - CORS_ALLOW_ORIGIN=http://localhost:3000
+    restart: always

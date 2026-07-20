@@ -1,0 +1,20 @@
+# SLA Thresholds
+WHI_THRESHOLD_CRITICAL = 60.0
+WHI_THRESHOLD_FAIR = 75.0
+
+AMMONIA_ALERT_PPM = 50.0
+SUPPLY_ALERT_PCT = 20.0
+
+# Unit Capacities matching database seeding
+UNIT_CAPACITY = {
+    "PPM": 4,
+    "PPF": 4,
+    "PPD": 2,
+    "STF": 3
+}
+
+# WHI calculation weights
+WEIGHT_CLEANLINESS = 0.35
+WEIGHT_OCCUPANCY = 0.20
+WEIGHT_SUPPLIES = 0.25
+WEIGHT_AIR_QUALITY = 0.20
